@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p2"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p2"><span class="s1">&lt;head&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Kuiz Sains KSSR UASA Tahun 4&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/react@18/umd/react.production.min.js"&gt;&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"&gt;&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6; }</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.glass-panel { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="root"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script type="text/babel"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>const { useState, useEffect } = React;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>const quizData = [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>// TEMA: MANUSIA</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Manusia: Pernafasan &amp; Perkumuhan",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan sistem pernafasan manusia. Apakah organ R? / The diagram shows the human respiratory system. What is organ R?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Hidung / Nose", "Trakea / Trachea", "Peparu / Lungs", "Jantung / Heart"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 2</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Manusia: Pernafasan &amp; Perkumuhan",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan satu organ perkumuhan (Ginjal/Kidney). Apakah bahan buangan bagi organ perkumuhan di atas? / What is the waste product for the excretory organ above?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Peluh / Sweat", "Tinja / Faeces", "Air kencing / Urine", "Karbon dioksida / Carbon dioxide"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 2</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Manusia: Pernafasan &amp; Perkumuhan",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Apakah yang dimaksudkan dengan perkumuhan? / What is meant by excretion?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Proses penyingkiran tinja. / The process of removing faeces.",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Proses gerak balas terhadap rangsangan. / The process of responding to stimuli.",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Proses menyedut udara masuk ke dalam peparu. / The process of inhaling air.",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Proses penyingkiran bahan buangan dari badan. / The process of removing waste products from the body."</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 3</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Manusia: Pernafasan &amp; Perkumuhan",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan satu organ perkumuhan (Kulit/Skin). Apakah hasil perkumuhan organ ini? / What are the excretory products of this organ?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Tinja / Faeces", "Air kencing / Urine", "Peluh / Sweat", "Karbon dioksida / Carbon dioxide"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 2</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Manusia: Gerak Balas &amp; Tabiat",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan poster penyalahgunaan dadah. Apakah kesan dadah ke atas manusia? / What is the effect of drugs on humans?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Sukar berkomunikasi / Difficult to communicate",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Menambah kecergasan / Increases fitness",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Mengganggu gerak balas / Disrupt of response",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Menyihatkan kesihatan / Improves health"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 2</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Manusia: Gerak Balas &amp; Tabiat",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan keadaan seorang lelaki semasa keluar dari sebuah kafe (mabuk). Apakah kesan jika dia memandu? / What will happen if he drives?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Dia lebih berhati-hati / He will be more careful",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Dia boleh menyebabkan kemalangan / He may cause an accident",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Dia menjadi lebih fokus / He will be more focused",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Dia akan menerima pujian / He will receive praise"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 1</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Manusia: Gerak Balas &amp; Tabiat",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Sammy sedang menonton televisyen. Tiba-tiba, dia terdengar bunyi guruh yang sangat kuat. Apakah gerak balas Sammy? / What is Sammy's reaction after he heard the thunder?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Menutup matanya dengan tangan / Closing his eyes",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Menutup telinganya dengan tangan / Covering his ears",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Menutup hidungnya dengan tangan / Covering his nose",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Mengangkat kakinya ke atas kerusi / Lifting his legs"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 1</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>// TEMA: HAIWAN</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Haiwan: Vertebrata &amp; Invertebrata",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan seekor haiwan vertebrata (Ular/Snake). Antara yang berikut, manakah betul menerangkan ciri khusus haiwan ini? / Which correctly describes a specific characteristic of this animal?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Melahirkan anak / Give birth",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Hidup di darat dan air / Lives on land and in water",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Mempunyai bulu pelepah / Has feathers",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Bernafas melalui peparu / Breathes through lungs"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 3</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Haiwan: Vertebrata &amp; Invertebrata",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan haiwan invertebrata (Ulat bercas/Caterpillar). Antara haiwan berikut, yang manakah boleh dikelaskan dalam kumpulan yang sama? / Which animal can be classified in the same group?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Rusa (Deer)", "Ikan (Fish)", "Ular (Snake)", "Rama-rama (Butterfly)"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 3</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Haiwan: Organ Pernafasan",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Seekor belalang yang telah disapu dengan lapisan minyak di seluruh badannya diletakkan ke dalam balang berlubang. Apakah yang akan berlaku selepas satu jam? / A grasshopper coated with oil is placed in a jar with holes. What will happen after one hour?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Sudah mati / Already dead", "Masih hidup / Still alive", "Boleh terbang / Able to fly", "Boleh makan daun / Able to eat leaves"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 0</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Haiwan: Vertebrata &amp; Invertebrata",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Haiwan ini bernafas menggunakan peparu dan kulit lembap, bertelur dan hidup di darat dan air. Apakah kumpulan haiwan itu? / Breathes using lungs &amp; moist skin, lay eggs, lives on land &amp; water. What group?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Mamalia / Mammals", "Reptilia / Reptiles", "Amfibia / Amphibians", "Burung / Birds"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 2</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>// TEMA: TUMBUH-TUMBUHAN</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Tumbuh-tumbuhan: Fotosintesis &amp; Gerak Balas",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan pokok semalu disentuh. Antara tumbuhan berikut, yang manakah bergerak balas terhadap rangsangan yang sama? / Which plant reacts to the same stimuli as Mimosa pudica?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Pokok mawar / Rose plant", "Pokok kelapa / Coconut tree", "Pokok orkid / Orchid plant", "Pokok perangkap lalat Venus / Venus flytrap"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 3</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Tumbuh-tumbuhan: Fotosintesis &amp; Gerak Balas",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Puan Azie terlupa menyiram pokok bunga di tempat letak kereta berbumbung selama seminggu. Pokok telah layu. Apakah kaedah menyelamatkan pokok? / Forgot to water plants in covered car park for a week. How to save them?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Menyiram pokok &amp; Letak di ruang terbuka / Water and place in open area",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Menyiram pokok &amp; Mengalihkan ke dalam pasu besar / Water and transfer to larger pot",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Letak di ruang terbuka &amp; tertutup / Place in open &amp; closed area",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Letak di ruang tertutup &amp; pasu besar / Place in closed area &amp; larger pot"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 0</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Tumbuh-tumbuhan: Fotosintesis &amp; Gerak Balas",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Tumbuhan diletakkan di dalam bilik (menjauhi tingkap). Apakah yang perlu dilakukan untuk membolehkan tumbuhan tumbuh tegak? / Plant placed in a room. What should be done to allow it to grow upright?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Letak dalam kotak hitam / Place in a black box",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Siram dengan kerap / Water regularly",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Letak di luar rumah / Place outside the house",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Buka tingkap itu / Open the window"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 3</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>// TEMA: SAINS FIZIKAL (Cahaya, Bunyi, Tenaga)</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Sains Fizikal: Cahaya &amp; Bunyi",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan fenomena cahaya (cahaya matahari melalui celah pokok). Apakah sifat cahaya yang ditunjukkan? / What is the property of light shown?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Cahaya boleh dibiaskan / Light can be refracted",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Cahaya boleh dipantulkan / Light can be reflected",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Cahaya bergerak dalam garis lurus / Light travels in a straight line",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Cahaya boleh merambat dalam vakum / Light can propagate in a vacuum"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 2</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Sains Fizikal: Cahaya &amp; Bunyi",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan pembentukan pelangi selepas hujan. Apakah fenomena cahaya yang ditunjukkan? / What is the light phenomenon shown in the formation of a rainbow?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Cahaya dibiaskan / Light is refracted",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Cahaya dipantulkan / Light is reflected",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Cahaya bergerak lurus / Light travels in a straight line",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Cahaya bergerak semua arah / Light travels in all directions"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 0</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Sains Fizikal: Cahaya &amp; Bunyi",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan Jessie bermain gitar. Apakah cara menghasilkan bunyi gitar? / How does Jessie produce sound from the guitar?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Tiupan / Blowing", "Petikan / Plucking", "Ketukan / Knocking", "Tepukan / Clapping"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 1</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Sains Fizikal: Tenaga",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan Siti menggunakan dapur gas. Apakah perubahan bentuk tenaga yang terlibat? / What is the energy transformation involved?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Tenaga haba -&gt; Tenaga kimia / Heat to chemical",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Tenaga kimia -&gt; Tenaga haba / Chemical to heat",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Tenaga cahaya -&gt; Tenaga haba / Light to heat",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"Tenaga kinetik -&gt; Tenaga kimia / Kinetic to chemical"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 1</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>// TEMA: BAHAN, BUMI &amp; MESIN</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Bahan, Bumi &amp; Mesin",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Pak Cik Lee ingin membuat almari pakaian yang kukuh dan tahan lama. Bahan manakah yang sesuai? / Uncle Lee wants to build a sturdy wardrobe. Which material is suitable?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Besi / Iron", "Kayu / Wood", "Plastik / Plastic", "Tanah liat / Clay"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 1</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Bahan, Bumi &amp; Mesin",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan daya yang mengekalkan objek pada kedudukannya di Bumi. Apakah daya ini? / The diagram shows a force that keeps objects in their positions on Earth. What force?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Daya kinetik / Kinetic force", "Daya tarikan / Pull force", "Daya tolakan / Push force", "Daya tarikan graviti / Gravitational pull"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 3</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>topic: "Bahan, Bumi &amp; Mesin",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>question: "Rajah menunjukkan sebilah gunting. Apakah yang diwakili oleh P (pemegang), Q (skru tengah), dan R (mata pemotong)? / What is represented by P, Q and R?",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>options: [</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"P: Beban, Q: Daya, R: Fulkrum",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"P: Fulkrum, Q: Daya, R: Beban",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"P: Daya, Q: Fulkrum, R: Beban",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"P: Beban, Q: Fulkrum, R: Daya"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>answer: 2</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>function App() {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const [currentQuestion, setCurrentQuestion] = useState(0);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const [score, setScore] = useState(0);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const [showScore, setShowScore] = useState(false);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const [selectedTopic, setSelectedTopic] = useState('Semua Topik');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const [filteredQuiz, setFilteredQuiz] = useState(quizData);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const [userAnswers, setUserAnswers] = useState([]);</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const topics = ['Semua Topik', ...new Set(quizData.map(q =&gt; q.topic))];</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>useEffect(() =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>if (selectedTopic === 'Semua Topik') {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>setFilteredQuiz(quizData);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>setFilteredQuiz(quizData.filter(q =&gt; q.topic === selectedTopic));</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setCurrentQuestion(0);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setScore(0);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setShowScore(false);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setUserAnswers([]);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>}, [selectedTopic]);</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const handleAnswerOptionClick = (index) =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>const isCorrect = index === filteredQuiz[currentQuestion].answer;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>if (isCorrect) setScore(score + 1);</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>const newAnswers = [...userAnswers];</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>newAnswers[currentQuestion] = { selected: index, isCorrect };</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setUserAnswers(newAnswers);</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>const nextQuestion = currentQuestion + 1;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>if (nextQuestion &lt; filteredQuiz.length) {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>setCurrentQuestion(nextQuestion);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>setShowScore(true);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const restartQuiz = () =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setCurrentQuestion(0);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setScore(0);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setShowScore(false);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>setUserAnswers([]);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>return (</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="min-h-screen p-4 md:p-8 flex items-center justify-center"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="max-w-3xl w-full glass-panel rounded-2xl shadow-xl overflow-hidden"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>{/* Header */}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="bg-blue-600 text-white p-6 text-center"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h1 className="text-3xl font-bold mb-2"&gt;&lt;i className="fas fa-flask mr-3"&gt;&lt;/i&gt;Kuiz Sains Tahun 4 (UASA)&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p className="text-blue-100"&gt;Jawab semua soalan dengan teliti. / Answer all questions carefully.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>{/* Topic Selector (Only show if not finished) */}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>{!showScore &amp;&amp; (</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="bg-gray-100 p-4 border-b border-gray-200 flex justify-center items-center gap-4"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;label className="font-semibold text-gray-700"&gt;Pilih Topik / Select Topic:&lt;/label&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;select<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>className="p-2 rounded border border-gray-300 bg-white text-sm md:text-base outline-none focus:ring-2 focus:ring-blue-500"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>value={selectedTopic}<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>onChange={(e) =&gt; setSelectedTopic(e.target.value)}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                </span>&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>{topics.map((topic, idx) =&gt; (</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;option key={idx} value={topic}&gt;{topic}&lt;/option&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>))}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/select&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>)}</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="p-6 md:p-8"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                            </span>{showScore ? (</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;div className="text-center animate-fade-in"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;i className="fas fa-trophy text-6xl text-yellow-400 mb-4"&gt;&lt;/i&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;h2 className="text-3xl font-bold text-gray-800 mb-2"&gt;Markah Anda / Your Score&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;p className="text-2xl font-semibold text-blue-600 mb-6"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>{score} / {filteredQuiz.length}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;div className="h-4 w-full bg-gray-200 rounded-full mb-8 overflow-hidden"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;div<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                            </span>className="h-full bg-blue-500 transition-all duration-1000"<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                            </span>style={{width: `${(score/filteredQuiz.length)*100}%`}}&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>onClick={restartQuiz}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;i className="fas fa-redo mr-2"&gt;&lt;/i&gt; Cuba Lagi / Try Again</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                            </span>) : (</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;div className="mb-6 flex justify-between items-center text-sm font-semibold text-gray-500"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full"&gt;{filteredQuiz[currentQuestion].topic}&lt;/span&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;span&gt;Soalan / Question {currentQuestion + 1} / {filteredQuiz.length}&lt;/span&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                    </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;div className="mb-8"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6 leading-relaxed"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                            </span>{filteredQuiz[currentQuestion].question}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;div className="space-y-3"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                            </span>{filteredQuiz[currentQuestion].options.map((option, index) =&gt; (</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;button</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                    </span>key={index}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                    </span>onClick={() =&gt; handleAnswerOptionClick(index)}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                    </span>className="w-full text-left p-4 rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition duration-200 font-medium text-gray-700 flex items-center gap-3"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                </span>&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;span className="bg-gray-100 text-gray-600 w-8 h-8 rounded-full flex items-center justify-center shrink-0"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                        </span>{String.fromCharCode(65 + index)}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;/span&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                    </span>{option}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                            </span>))}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                            </span>)}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>const root = ReactDOM.createRoot(document.getElementById('root'));</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>root.render(&lt;App /&gt;);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/html&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"></span><br></p>
+</body>
+</html>
